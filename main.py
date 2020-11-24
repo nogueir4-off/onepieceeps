@@ -7,8 +7,8 @@ numero = 0
 second = 0
 minute = 0
 
-auth = tweepy.OAuthHandler('2OUYi5khnoB6ZBMB4YZHKR1Q1',	'xXAyrL27aZyzdsDKIISPoxdxTxEXCVrYzw087OZtOCOMtrfWFT')
-auth.set_access_token('1330647738342641666-JvMSvWNZqPoBxdzrx5JUBm3JQcnTyI', 'xIDj4WHICB7eyYiA44QRe1GtFqEXYh7a67K9Fj6zPtkMQ')
+auth = tweepy.OAuthHandler(APIKEY, SECRETKEY)
+auth.set_access_token(TOKEN, SECRETTOKEN)
 
 api = tweepy.API(auth, wait_on_rate_limit=True)
 
