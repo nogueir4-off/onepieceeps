@@ -7,8 +7,13 @@ numero = 0
 second = 0
 minute = 0
 
-auth = tweepy.OAuthHandler(os.environ['APIKEY'], os.environ['SECRETKEY'])
-auth.set_access_token(os.environ['TOKEN'], os.environ['SECRETTOKEN'])
+apikey = S3Connection(os.environ['APIKEY'])
+secretkey = S3Connection(os.environ['SECRETKEY'])
+token = S3Connection(os.environ['TOKEN'])
+secrettoken = S3Connection(os.environ['SECRETTOKEN'])
+
+auth = tweepy.OAuthHandler(apikey, secretkey)
+auth.set_access_token(token, secrettoken)
 
 api = tweepy.API(auth, wait_on_rate_limit=True)
 
