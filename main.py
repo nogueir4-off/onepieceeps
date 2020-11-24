@@ -1,5 +1,5 @@
 import tweepy
-from boto.s3.connection import S3Connection
+import boto
 from time import sleep
 
 title = ''
