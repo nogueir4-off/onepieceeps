@@ -1,5 +1,4 @@
 import tweepy
-import boto
 from time import sleep
 
 title = ''
@@ -7,13 +6,8 @@ numero = 0
 second = 0
 minute = 0
 
-apikey = S3Connection(os.environ['APIKEY'])
-secretkey = S3Connection(os.environ['SECRETKEY'])
-token = S3Connection(os.environ['TOKEN'])
-secrettoken = S3Connection(os.environ['SECRETTOKEN'])
-
-auth = tweepy.OAuthHandler(apikey, secretkey)
-auth.set_access_token(token, secrettoken)
+auth = tweepy.OAuthHandler('2OUYi5khnoB6ZBMB4YZHKR1Q1',	'xXAyrL27aZyzdsDKIISPoxdxTxEXCVrYzw087OZtOCOMtrfWFT')
+auth.set_access_token('1330647738342641666-JvMSvWNZqPoBxdzrx5JUBm3JQcnTyI', 'xIDj4WHICB7eyYiA44QRe1GtFqEXYh7a67K9Fj6zPtkMQ')
 
 api = tweepy.API(auth, wait_on_rate_limit=True)
 
